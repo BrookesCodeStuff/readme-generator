@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Generates a README file based on user input",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brooke Paglia",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brookescodestuff/readme-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brookescodestuff/readme-generator/issues"
+  },
+  "homepage": "https://github.com/brookescodestuff/readme-generator#readme"
+}
