@@ -3,18 +3,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-const mockData = {
-  title: 'Project',
-  description: 'project desc',
-  installation: 'install it',
-  usage: 'click things',
-  license: 'MIT',
-  contributing: 'guidelines',
-  tests: 'do testing',
-  githubUser: 'brookescodestuff',
-  email: 'email@email.com',
-};
-
 // An array of questions for user input
 const questions = [
   {
