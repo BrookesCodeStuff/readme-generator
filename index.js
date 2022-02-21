@@ -1,6 +1,7 @@
 // Required packages
 const inquirer = require('inquirer');
-const gm = require('./utils/generateMarkdown');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 const mockData = {
   title: 'Project',
@@ -76,14 +77,31 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+// Write the README to file
+function writeToFile(fileName, data) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(`./dist/${fileName}`, data, (err) => {
+      if (err) {
+        reject(err);
+        return;
+      }
 
-// TODO: Create a function to initialize app
+      resolve({
+        ok: true,
+        message: 'README file created!',
+      });
+    });
+  });
+}
+
+// Function to initialize the app
 function init() {
-  // inquirer.prompt(questions).then((answers) => gm(answers));
-  console.log(gm(mockData));
+  return inquirer.prompt(questions);
 }
 
 // Function call to initialize app
-init();
+init()
+  .then((projectData) => {
+    return generateMarkdown(projectData);
+  })
+  .then((markdown) => writeToFile('README.md', markdown));

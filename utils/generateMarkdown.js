@@ -13,23 +13,31 @@ function renderLicenseLink(license) {
   switch (license) {
     case 'MIT':
       licenseLink = 'https://choosealicense.com/licenses/mit/';
+      break;
     case 'AGPL v3':
       licenseLink = 'https://choosealicense.com/licenses/agpl-3.0/';
+      break;
     case 'GPL v3':
       licenseLink = 'https://choosealicense.com/licenses/gpl-3.0/';
+      break;
     case 'LBPL v3':
       licenseLink = 'https://choosealicense.com/licenses/lgpl-3.0/';
+      break;
     case 'MPL v2':
       licenseLink = 'https://choosealicense.com/licenses/mpl-2.0/';
+      break;
     case 'Apache 2.0':
       licenseLink = 'https://choosealicense.com/licenses/apache-2.0/';
+      break;
     case 'BSL':
       licenseLink = 'https://choosealicense.com/licenses/bsl-1.0/';
+      break;
     case 'Unlicense':
       licenseLink = 'https://choosealicense.com/licenses/unlicense/';
       break;
     default:
       licenseLink = '';
+      break;
   }
   return licenseLink;
 }
