@@ -17,3 +17,5 @@ Use the command `npm init` to install the required dependencies.
 Once the dependencies have installed, use the command `node index` to run the program. The user is prompted to answer questions and provide information about their project. This information will be used to create the README file.
 
 ## Walkthrough Video
+
+[Walkthrough](https://drive.google.com/file/d/10HqD3qi_zAODmuDBmmw7dzwoKN69y96j/view)
